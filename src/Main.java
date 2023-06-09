@@ -2,58 +2,73 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("====================");
-        System.out.println("Budget Buddy");
-        System.out.println("======================");
-        System.out.println("Please type your total spending budget in US dollars: ");
-        System.out.println(" ");
+        int p;
+        int y = 1234;
+        int Amount = 500;
+        int result;
+        int info;
+        int f;
+        int g;
 
-        //scanner class and 2 arrays
-        //total budget value from user
-        Scanner scan = new Scanner(System.in);
-        double total = scan.nextDouble();
-        double sum = 0;
-        int counter = 0;
-        int i = 0;
-        ArrayList<Double> percent = new ArrayList<Double>();
-        ArrayList<String> label = new ArrayList<String>();
+        Scanner in = new Scanner(System.in);
+        System.out.println("Welcome to Sample Bank App. For example purposes, your PIN number is 1234.");
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Please enter PIN number ");
+            p = in.nextInt();
+            if (p == y) {
+                System.out.println("You have entered the correct PIN number. ");
+                boolean end = false;
+                do {
+                    System.out.println("\nPress 1 to View Bank Account.");
+                    System.out.println("Press 2 to Deposit money");
+                    System.out.println("Press 3 to Withdraw money");
+                    System.out.println("Press 4 to Look At Credit Cards");
+                    System.out.println("Press 5 to for Budget Buddy");
+                    info = in.nextInt();
 
-        System.out.println("Total budget set at $" + total);
+                    switch (info) {
+                        case 1:
+                            System.out.println("You have " + Amount + "$ available.");
+                            break;
+                        case 2:
+                            System.out.println("You have " + Amount + "$ available.");
+                            System.out.println("Please enter the amount you wish to deposit: ");
+                            f = in.nextInt();
+                            result = Amount + f;
+                            System.out.println("You now have " + result + "$ available.");
+                            break;
+                        case 3:
+                            System.out.println("You have " + Amount + " $ available.");
+                            System.out.println("Please enter the amount you would like to withdraw: ");
+                            g = in.nextInt();
+                            if (g > 500) {
+                                System.out.println("You cannot withdraw more than your current balance.");
+                            } else {
+                                System.out.println("You have successfully withdrawn " + g + " $");
+                                result = Amount - g;
+                                System.out.println("You now have " + result + "$ available.");
+                            }
 
-        do {
-            System.out.println("Type your percentage of expense " + (counter + 1) + ":");
-            double value = scan.nextDouble();
-            percent.add(value);
-            scan.nextLine();
-            sum += percent.get(counter);
-            counter++;
-            System.out.println("Give this task a name. ");
-            String name = scan.nextLine();
-            label.add(name);
-
-            //do while loop
-        } while (sum <= 100);
-        scan.close();
-
-        //once we reach 100, stop taking values
-        if (sum >= 100) {
-            double cumulativeSum = 0.0;
-            for (int j = 0; j < percent.size() - 1; j++) {
-                cumulativeSum += percent.get(j);
+                            break;
+                        case 4:
+                            System.out.println("You will be redirected to Credit Cards shortly.");
+                            CreditCard ccObject = new CreditCard();
+                            ccObject.creditCard();
+                            break;
+                        case 5:
+                            System.out.println("You will be redirected to Budget Buddy shortly.");
+                            BudgetBuddy mpObject = new BudgetBuddy();
+                            mpObject.monthlyBudget();
+                            break;
+                        default:
+                            System.out.println("Error, invalid input.");
+                            break;
+                        }
+                    return;
+                } while (end == false);
+            } else {
+                System.out.println("You have entered the incorrect PIN number. Please try again.");
             }
-            percent.set(percent.size() - 1, 100.0 - cumulativeSum);
         }
-
-        System.out.println("Any percentages over 100 have been adjusted to fit budget. ");
-        System.out.println(" ");
-
-        //Math calculation and output values
-        for (double value : percent) {
-            String labelNum = label.get(i);
-            double expense = value * total/100.0;
-            System.out.println("Your allocation for " + labelNum + " (" + value + "%) equals: $" + expense);
-            i++;
-        }
-        System.out.println("Thank you for using this tool!");
     }
 }
