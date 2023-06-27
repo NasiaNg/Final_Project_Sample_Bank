@@ -2,6 +2,7 @@
 //Switch Statement
 import java.util.Scanner;
 public class Main {
+
     public static void main(String[] args) {
 
         int p;
@@ -11,6 +12,7 @@ public class Main {
         int info;
         int f;
         int g;
+
 
         Scanner in = new Scanner(System.in);
         System.out.println("Welcome to Sample Bank App. For example purposes, your PIN number is 1234.");
@@ -29,17 +31,15 @@ public class Main {
                     info = in.nextInt();
 
                     switch (info) {
-                        case 1:
-                            System.out.println("You have " + Amount + "$ available.");
-                            break;
-                        case 2:
+                        case 1 -> System.out.println("You have " + Amount + "$ available.");
+                        case 2 -> {
                             System.out.println("You have " + Amount + "$ available.");
                             System.out.println("Please enter the amount you wish to deposit: ");
                             f = in.nextInt();
                             result = Amount + f;
                             System.out.println("You now have " + result + "$ available.");
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             System.out.println("You have " + Amount + " $ available.");
                             System.out.println("Please enter the amount you would like to withdraw: ");
                             g = in.nextInt();
@@ -50,24 +50,17 @@ public class Main {
                                 result = Amount - g;
                                 System.out.println("You now have " + result + "$ available.");
                             }
-
-                            break;
-                        case 4:
-                            System.out.println("You will be redirected to Credit Cards shortly.");
-                            CreditCard ccObject = new CreditCard();
-                            ccObject.cc();
-                            break;
-                        case 5:
+                        }
+                        case 4 -> System.out.println("You will be redirected to Credit Cards shortly.");
+                        case 5 -> {
                             System.out.println("You will be redirected to Budget Buddy shortly.");
                             BudgetBuddy mpObject = new BudgetBuddy();
                             mpObject.monthlyBudget();
-                            break;
-                        default:
-                            System.out.println("Error, invalid input.");
-                            break;
                         }
+                        default -> System.out.println("Error, invalid input.");
+                    }
                     return;
-                } while (end == false);
+                } while (!end);
             } else {
                 System.out.println("You have entered the incorrect PIN number. Please try again.");
             }

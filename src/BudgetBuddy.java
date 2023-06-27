@@ -1,5 +1,5 @@
-//Array List
-//Do-While Loop
+/*Array List*/
+/*Do-While Loop*/
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,16 +11,14 @@ public class BudgetBuddy {
         System.out.println("=====================");
         System.out.println("\nPlease type your total spending budget in US dollars: ");
         System.out.println(" ");
-
-        //Scanner class and 2 arrays
-        //total budget value from user
+/* Scanner class and 2 arrays, total budget value from user */
         Scanner scan = new Scanner(System.in);
         double total = scan.nextDouble();
         double sum = 0;
         int counter = 0;
         int i = 0;
-        ArrayList<Double> percent = new ArrayList<Double>();
-        ArrayList<String> label = new ArrayList<String>();
+        ArrayList<Double> percent = new ArrayList<>();
+        ArrayList<String> label = new ArrayList<>();
 
         System.out.println("Total budget set at $" + total);
 
@@ -35,11 +33,11 @@ public class BudgetBuddy {
             String name = scan.nextLine();
             label.add(name);
 
-            //do while loop
+/* do while loop */
         } while (sum <= 100);
         scan.close();
 
-        //once we reach 100, stop taking values
+/* once we reach 100, stop taking values */
         if (sum >= 100) {
             double cumulativeSum = 0.0;
             for (int j = 0; j < percent.size() - 1; j++) {
@@ -51,7 +49,7 @@ public class BudgetBuddy {
         System.out.println("Any percentages over 100 have been adjusted to fit budget. ");
         System.out.println(" ");
 
-        //Math calculation and output values
+/* Math calculation and output values */
         for (double value : percent) {
             String labelNum = label.get(i);
             double expense = value * total / 100.0;
