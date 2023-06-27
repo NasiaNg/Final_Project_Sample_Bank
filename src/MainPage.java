@@ -17,7 +17,7 @@ public class MainPage {
     public String toString() {
         return ("Annual Fee= " + annualFee + "\n" + "Cash Back= " + cashback + "%" + "\n" + "Interest Rate= " + interestRate + "%" + "\n");
     }
-    /* Inheritance */
+    /* Inheritance & Super Keyword */
     static class Bronze extends MainPage {
         public Bronze(String annualFee, int cashback, double interestRate) {
             super(annualFee, cashback, interestRate);
