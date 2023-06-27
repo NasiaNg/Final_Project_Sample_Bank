@@ -97,7 +97,9 @@ public class MainPage {
                         }
                         case 4 -> {
                             System.out.println("You will be redirected to Credit Cards shortly." + "\n");
-                            System.out.println("Available Credit Cards:" + "\n");
+                            System.out.println("=====================");
+                            System.out.println("Available Credit Cards:");
+                            System.out.println("====================="+ "\n");
                             System.out.println("Bronze Card");
                             System.out.println(BronzeCard);
                             System.out.println("Silver Card");
@@ -108,7 +110,7 @@ public class MainPage {
                             System.out.println(DiamondCard);
                         }
                         case 5 -> {
-                            System.out.println("You will be redirected to Budget Buddy shortly.");
+                            System.out.println("You will be redirected to Budget Buddy shortly." + "\n");
                             BudgetBuddy mpObject = new BudgetBuddy();
                             mpObject.monthlyBudget();
                         }

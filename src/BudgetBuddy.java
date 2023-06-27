@@ -11,7 +11,7 @@ public class BudgetBuddy {
         System.out.println("=====================");
         System.out.println("\nPlease type your total spending budget in US dollars: ");
         System.out.println(" ");
-/* Scanner class and 2 arrays, total budget value from user */
+/* Scanner Class and 2 Array Lists, total budget value from user */
         Scanner scan = new Scanner(System.in);
         double total = scan.nextDouble();
         double sum = 0;
@@ -33,11 +33,11 @@ public class BudgetBuddy {
             String name = scan.nextLine();
             label.add(name);
 
-/* do while loop */
+/* Do-While Loop */
         } while (sum <= 100);
         scan.close();
 
-/* once we reach 100, stop taking values */
+/* Once we reach 100, stop taking values */
         if (sum >= 100) {
             double cumulativeSum = 0.0;
             for (int j = 0; j < percent.size() - 1; j++) {
@@ -46,7 +46,7 @@ public class BudgetBuddy {
             percent.set(percent.size() - 1, 100.0 - cumulativeSum);
         }
 
-        System.out.println("Any percentages over 100 have been adjusted to fit budget. ");
+        System.out.println("\n" + "Any percentages over 100 have been adjusted to fit budget. ");
         System.out.println(" ");
 
 /* Math calculation and output values */
