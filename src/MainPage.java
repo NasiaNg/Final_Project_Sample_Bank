@@ -1,7 +1,47 @@
 //Scanner Class
 //Switch Statement
 import java.util.Scanner;
-public class Main {
+public class MainPage {
+    /* properties */
+    public String annualFee;
+    public int cashback;
+    public double interestRate;
+
+    /* constructors */
+    public MainPage(String annualFee, int cashback, double interestRate) {
+        this.annualFee = annualFee;
+        this.cashback = cashback;
+        this.interestRate = interestRate;
+    }
+    /* toString() & Method Override */
+    @Override
+    public String toString() {
+        return ("Annual Fee= " + annualFee + "\n" + "Cash Back= " + cashback + "%" + "\n" + "Interest Rate= " + interestRate + "%" + "\n");
+    }
+    /* Inheritance */
+    static class Bronze extends MainPage {
+        public Bronze(String annualFee, int cashback, double interestRate) {
+            super(annualFee, cashback, interestRate);
+        }
+    }
+
+    static class Silver extends MainPage {
+        public Silver(String annualFee, int cashback, double interestRate) {
+            super(annualFee, cashback, interestRate);
+        }
+    }
+
+    static class Gold extends MainPage {
+        public Gold(String annualFee, int cashback, double interestRate) {
+            super(annualFee, cashback, interestRate);
+        }
+    }
+
+    static class Diamond extends MainPage {
+        public Diamond(String annualFee, int cashback, double interestRate) {
+            super(annualFee, cashback, interestRate);
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -12,6 +52,11 @@ public class Main {
         int info;
         int f;
         int g;
+
+        MainPage BronzeCard = new MainPage("None", 1, 29.80);
+        MainPage SilverCard = new MainPage("None", 2, 24.61);
+        MainPage GoldCard = new MainPage("$95", 5, 18.30);
+        MainPage DiamondCard = new MainPage("None", 10, 13.00);
 
 
         Scanner in = new Scanner(System.in);
@@ -51,7 +96,18 @@ public class Main {
                                 System.out.println("You now have " + result + "$ available.");
                             }
                         }
-                        case 4 -> System.out.println("You will be redirected to Credit Cards shortly.");
+                        case 4 -> {
+                            System.out.println("You will be redirected to Credit Cards shortly." + "\n");
+                            System.out.println("Available Credit Cards:" + "\n");
+                            System.out.println("Bronze Card");
+                            System.out.println(BronzeCard);
+                            System.out.println("Silver Card");
+                            System.out.println(SilverCard);
+                            System.out.println("Gold Card");
+                            System.out.println(GoldCard);
+                            System.out.println("Diamond Card");
+                            System.out.println(DiamondCard);
+                        }
                         case 5 -> {
                             System.out.println("You will be redirected to Budget Buddy shortly.");
                             BudgetBuddy mpObject = new BudgetBuddy();
