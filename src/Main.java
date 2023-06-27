@@ -1,7 +1,9 @@
+//Scanner Class
+//Switch Statement
 import java.util.Scanner;
-import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
+
         int p;
         int y = 1234;
         int Amount = 500;
@@ -53,7 +55,7 @@ public class Main {
                         case 4:
                             System.out.println("You will be redirected to Credit Cards shortly.");
                             CreditCard ccObject = new CreditCard();
-                            ccObject.creditCard();
+                            ccObject.cc();
                             break;
                         case 5:
                             System.out.println("You will be redirected to Budget Buddy shortly.");

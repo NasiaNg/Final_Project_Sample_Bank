@@ -1,3 +1,6 @@
+//Array List
+//Do-While Loop
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,7 +12,7 @@ public class BudgetBuddy {
         System.out.println("\nPlease type your total spending budget in US dollars: ");
         System.out.println(" ");
 
-        //scanner class and 2 arrays
+        //Scanner class and 2 arrays
         //total budget value from user
         Scanner scan = new Scanner(System.in);
         double total = scan.nextDouble();
