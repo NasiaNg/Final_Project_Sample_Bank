@@ -1,5 +1,4 @@
-//Scanner Class
-//Switch Statement
+/* Scanner, Switch Statement, Method Override, To String, Super Keyword, Inheritance */
 import java.util.Scanner;
 public class MainPage {
     /* properties */
