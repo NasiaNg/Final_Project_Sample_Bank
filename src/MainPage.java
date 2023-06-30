@@ -1,18 +1,17 @@
-/* Scanner, Switch Statement, Method Override, To String, Super Keyword, Inheritance */
+/* Scanner, Switch Statement, Method Override, To String, Super Keyword, Inheritance, Stack */
 import java.util.Scanner;
 public class MainPage {
-    /* properties */
+    /* Properties */
     public String annualFee;
     public int cashback;
     public double interestRate;
-
-    /* constructors */
+    /* Public Constructors */
     public MainPage(String annualFee, int cashback, double interestRate) {
         this.annualFee = annualFee;
         this.cashback = cashback;
         this.interestRate = interestRate;
     }
-    /* toString() & Method Override */
+    /* ToString() & Method Override */
     @Override
     public String toString() {
         return ("Annual Fee= " + annualFee + "\n" + "Cash Back= " + cashback + "%" + "\n" + "Interest Rate= " + interestRate + "%" + "\n");
@@ -109,10 +108,15 @@ public class MainPage {
                             System.out.println("Diamond Card");
                             System.out.println(DiamondCard);
                         }
+                        /* Stack */
                         case 5 -> {
-                            System.out.println("You will be redirected to Budget Buddy shortly." + "\n");
-                            BudgetBuddy mpObject = new BudgetBuddy();
-                            mpObject.monthlyBudget();
+                            System.out.println("\nYou will be redirected to Budget Buddy shortly." + "\n" + "\nPlease refresh the page if you are not redirected in 1 minute.\n");
+                            Countdown cdObject = new Countdown();
+                            cdObject.count();
+
+                            BudgetBuddy mdObject = new BudgetBuddy();
+                            mdObject.monthlyBudget();
+                            
                         }
                         default -> System.out.println("Error, invalid input.");
                     }

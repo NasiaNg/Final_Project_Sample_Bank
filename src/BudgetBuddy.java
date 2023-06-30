@@ -1,5 +1,4 @@
-/*Array List*/
-/*Do-While Loop*/
+/*Array List, Do-While Loop*/
 
 import java.util.ArrayList;
 import java.util.Scanner;
