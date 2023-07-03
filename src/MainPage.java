@@ -1,4 +1,5 @@
-/* Scanner, Switch Statement, Method Override, To String, Super Keyword, Inheritance, Stack */
+/* Scanner, Switch Statement, Method Override,
+To String, Super Keyword, Inheritance, Stack */
 import java.util.Scanner;
 public class MainPage {
     /* Properties */
@@ -11,6 +12,7 @@ public class MainPage {
         this.cashback = cashback;
         this.interestRate = interestRate;
     }
+
     /* ToString() & Method Override */
     @Override
     public String toString() {
@@ -41,11 +43,11 @@ public class MainPage {
         }
     }
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
         int p;
         int y = 1234;
-        int Amount = 500;
+        int Amount = 300;
         int result;
         int info;
         int f;
@@ -54,27 +56,31 @@ public class MainPage {
         MainPage BronzeCard = new MainPage("None", 1, 29.80);
         MainPage SilverCard = new MainPage("None", 2, 24.61);
         MainPage GoldCard = new MainPage("$95", 5, 18.30);
-        MainPage DiamondCard = new MainPage("None", 10, 13.00);
-
+        MainPage DiamondCard = new MainPage("$150", 10, 15.00);
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Welcome to Sample Bank App. For example purposes, your PIN number is 1234.");
+        System.out.println("Welcome to Sample Bank App. For example purposes, your PIN number is 1234.\n");
+        Time dtObject = new Time();
+        dtObject.datetime();
+
         for (int i = 0; i < 3; i++) {
-            System.out.println("Please enter PIN number ");
+            System.out.println("\nPlease enter PIN number: ");
             p = in.nextInt();
             if (p == y) {
                 System.out.println("You have entered the correct PIN number. ");
                 boolean end = false;
                 do {
-                    System.out.println("\nPress 1 to View Bank Account.");
-                    System.out.println("Press 2 to Deposit money");
-                    System.out.println("Press 3 to Withdraw money");
+                    System.out.println("\nPress 1 to View Bank Account");
+                    System.out.println("Press 2 to Deposit Money");
+                    System.out.println("Press 3 to Withdraw Money");
                     System.out.println("Press 4 to Look At Credit Cards");
-                    System.out.println("Press 5 to for Budget Buddy");
+                    System.out.println("Press 5 to For Budget Buddy");
+                    System.out.println("Press 6 to Check Credit Score");
                     info = in.nextInt();
 
                     switch (info) {
-                        case 1 -> System.out.println("You have " + Amount + "$ available.");
+                        case 1 ->
+                        System.out.println("You have " + Amount + "$ available.");
                         case 2 -> {
                             System.out.println("You have " + Amount + "$ available.");
                             System.out.println("Please enter the amount you wish to deposit: ");
@@ -107,6 +113,8 @@ public class MainPage {
                             System.out.println(GoldCard);
                             System.out.println("Diamond Card");
                             System.out.println(DiamondCard);
+                            MoreRewards mrObject = new MoreRewards();
+                            mrObject.rewards();
                         }
                         /* Stack */
                         case 5 -> {
@@ -116,7 +124,12 @@ public class MainPage {
 
                             BudgetBuddy mdObject = new BudgetBuddy();
                             mdObject.monthlyBudget();
-                            
+
+                        }
+                        case 6 -> {
+                            CreditScore csObject = new CreditScore();
+                            csObject.creditCheck();
+
                         }
                         default -> System.out.println("Error, invalid input.");
                     }

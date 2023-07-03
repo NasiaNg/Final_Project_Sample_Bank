@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BudgetBuddy {
+
     public void monthlyBudget() {
         System.out.println("====================");
         System.out.println("Budget Buddy");
