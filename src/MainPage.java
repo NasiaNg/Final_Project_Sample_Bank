@@ -1,8 +1,8 @@
 /* Scanner, Switch Statement, Method Override,
-To String, Super Keyword, Inheritance, Stack, Exception */
+To String, Super Keyword, Inheritance, Stack, Exception, Interface */
 import java.util.Scanner;
 public class MainPage {
-    /* Properties */
+/* Properties */
     public String annualFee;
     public int cashback;
     public double interestRate;
@@ -13,12 +13,12 @@ public class MainPage {
         this.interestRate = interestRate;
     }
 
-    /* ToString() & Method Override */
+/* ToString() & Method Override */
     @Override
     public String toString() {
         return ("Annual Fee= " + annualFee + "\n" + "Cash Back= " + cashback + "%" + "\n" + "Interest Rate= " + interestRate + "%" + "\n");
     }
-    /* Inheritance & Super Keyword */
+/* Inheritance & Super Keyword */
     static class Bronze extends MainPage {
         public Bronze(String annualFee, int cashback, double interestRate) {
             super(annualFee, cashback, interestRate);
@@ -60,9 +60,10 @@ public class MainPage {
 
         Scanner in = new Scanner(System.in);
         System.out.println("\nWelcome to Sample Bank App. For example purposes, your PIN number is 1234.\n");
+/* Interface */
+        Time myTime = new Time();
+        myTime.dt();
 
-        Time dtObject = new Time();
-        dtObject.datetime();
 
         for (int i = 0; i < 3; i++) {
             System.out.println("\nPlease enter PIN number: ");
@@ -72,6 +73,7 @@ public class MainPage {
                 System.out.println("");
                 boolean end = false;
                 do {
+/* Encapsulation */
                     NewAccount naObject = new NewAccount();
                     naObject.exampleAcct();
                     System.out.println("");
@@ -118,20 +120,22 @@ public class MainPage {
                             System.out.println(GoldCard);
                             System.out.println("Diamond Card");
                             System.out.println(DiamondCard);
+/* Hashmap */
                             MoreRewards mrObject = new MoreRewards();
                             mrObject.rewards();
                         }
-                        /* Stack */
+/* Stack */
                         case 5 -> {
                             System.out.println("\nYou will be redirected to Budget Buddy shortly." + "\n" + "\nPlease refresh the page if you are not redirected in 1 minute.\n");
                             Countdown cdObject = new Countdown();
                             cdObject.count();
-
+/*Array List, Do-While Loop*/
                             BudgetBuddy mdObject = new BudgetBuddy();
                             mdObject.monthlyBudget();
 
                         }
                         case 6 -> {
+/* Exception, Super Keyword */
                             CreditScore csObject = new CreditScore();
                             csObject.creditCheck();
 

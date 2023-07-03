@@ -28,10 +28,10 @@ public class NewAccount {
             name = newName;
         }
 
-        public void setAcctNum( String newAcctNum) {
+        public void setAcctNum(String newAcctNum) {
             AcctNum = newAcctNum;
         }
-        public void setRoutNum( String newRoutNum) {
+        public void setRoutNum(String newRoutNum) {
             RoutNum = newRoutNum;
         }
 
