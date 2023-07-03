@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/* Exception, Super Keyword */
 
 class LessThanException extends Exception {
         public LessThanException (String str)
@@ -8,6 +8,9 @@ class LessThanException extends Exception {
 }
 public class CreditScore {
         static void validate ( int score) throws LessThanException {
+            System.out.println("=====================");
+            System.out.println("Credit Score");
+            System.out.println("====================="+ "\n");
             System.out.println("Your credit score is " + score);
             if (score < 600) {
 

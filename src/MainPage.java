@@ -1,5 +1,5 @@
 /* Scanner, Switch Statement, Method Override,
-To String, Super Keyword, Inheritance, Stack */
+To String, Super Keyword, Inheritance, Stack, Exception */
 import java.util.Scanner;
 public class MainPage {
     /* Properties */
@@ -59,7 +59,8 @@ public class MainPage {
         MainPage DiamondCard = new MainPage("$150", 10, 15.00);
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Welcome to Sample Bank App. For example purposes, your PIN number is 1234.\n");
+        System.out.println("\nWelcome to Sample Bank App. For example purposes, your PIN number is 1234.\n");
+
         Time dtObject = new Time();
         dtObject.datetime();
 
@@ -68,8 +69,12 @@ public class MainPage {
             p = in.nextInt();
             if (p == y) {
                 System.out.println("You have entered the correct PIN number. ");
+                System.out.println("");
                 boolean end = false;
                 do {
+                    NewAccount naObject = new NewAccount();
+                    naObject.exampleAcct();
+                    System.out.println("");
                     System.out.println("\nPress 1 to View Bank Account");
                     System.out.println("Press 2 to Deposit Money");
                     System.out.println("Press 3 to Withdraw Money");

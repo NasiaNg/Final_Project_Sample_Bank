@@ -2,7 +2,7 @@
 
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.ListIterator;
+
 public class MoreRewards {
     public static void rewards() {
         RewardsHashMap();
