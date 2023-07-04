@@ -1,5 +1,6 @@
 /* Scanner, Switch Statement, Method Override,
-To String, Super Keyword, Inheritance, Stack, Exception, Interface */
+To String, Super Keyword, Inheritance, Stack,
+Exception, Interface, Abstract */
 import java.util.Scanner;
 public class MainPage {
 /* Properties */
@@ -73,9 +74,11 @@ public class MainPage {
                 System.out.println("");
                 boolean end = false;
                 do {
+
 /* Encapsulation */
                     NewAccount naObject = new NewAccount();
                     naObject.exampleAcct();
+
                     System.out.println("");
                     System.out.println("\nPress 1 to View Bank Account");
                     System.out.println("Press 2 to Deposit Money");
@@ -124,11 +127,13 @@ public class MainPage {
                             MoreRewards mrObject = new MoreRewards();
                             mrObject.rewards();
                         }
-/* Stack */
+/* Stack and Abstract */
                         case 5 -> {
-                            System.out.println("\nYou will be redirected to Budget Buddy shortly." + "\n" + "\nPlease refresh the page if you are not redirected in 1 minute.\n");
-                            Countdown cdObject = new Countdown();
-                            cdObject.count();
+                            System.out.println("\nYou will be redirected to Budget Buddy shortly.");
+                            countDown.Words myWords = new countDown.Words();
+                            myWords.numbers();
+                            myWords.Count();
+
 /*Array List, Do-While Loop*/
                             BudgetBuddy mdObject = new BudgetBuddy();
                             mdObject.monthlyBudget();

@@ -35,7 +35,7 @@ public class NewAccount {
             RoutNum = newRoutNum;
         }
 
-   public static void exampleAcct(){
+   public static void exampleAcct() {
             NewAccount encap = new NewAccount();
             encap.setName("First Name, Last Name");
             encap.setAge(24);
