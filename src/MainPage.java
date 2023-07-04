@@ -8,7 +8,7 @@ public class MainPage {
     public String annualFee;
     public int cashback;
     public double interestRate;
-    /* Public Constructors */
+/* Public Constructors */
     public MainPage(String annualFee, int cashback, double interestRate) {
         this.annualFee = annualFee;
         this.cashback = cashback;
