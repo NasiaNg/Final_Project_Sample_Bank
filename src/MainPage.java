@@ -1,6 +1,6 @@
 /* Scanner, Switch Statement, Method Override,
 To String, Super Keyword, Inheritance, Stack,
-Exception, Interface, Abstract
+Exception, Interface, Abstract, Array List, Do-While Loop
 Nasia Nguyen nasian1@umbc.edu*/
 import java.util.Scanner;
 public class MainPage {
@@ -150,7 +150,6 @@ public class MainPage {
                             System.exit(0);
                         default -> System.out.println("Error, invalid input. Please try again.");
                     }
-                    //return;
                 } while (true);
             } else {
                 System.out.println("You have entered the incorrect PIN number. Please try again.");
