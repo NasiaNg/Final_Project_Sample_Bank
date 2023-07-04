@@ -72,20 +72,20 @@ public class MainPage {
             if (p == y) {
                 System.out.println("You have entered the correct PIN number. ");
                 System.out.println("");
+                NewAccount naObject = new NewAccount();
+                naObject.exampleAcct();
+                System.out.println("");
+
                 boolean end = false;
                 do {
-
 /* Encapsulation */
-                    NewAccount naObject = new NewAccount();
-                    naObject.exampleAcct();
-
-                    System.out.println("");
                     System.out.println("\nPress 1 to View Bank Account");
                     System.out.println("Press 2 to Deposit Money");
                     System.out.println("Press 3 to Withdraw Money");
                     System.out.println("Press 4 to Look At Credit Cards");
                     System.out.println("Press 5 to For Budget Buddy");
                     System.out.println("Press 6 to Check Credit Score");
+                    System.out.println("Press 7 to Exit the Application");
                     info = in.nextInt();
 
                     switch (info) {
@@ -145,10 +145,12 @@ public class MainPage {
                             csObject.creditCheck();
 
                         }
-                        default -> System.out.println("Error, invalid input.");
+                        case 7 ->
+                            System.exit(0);
+                        default -> System.out.println("Error, invalid input. Please try again.");
                     }
-                    return;
-                } while (!end);
+                    //return;
+                } while (true);
             } else {
                 System.out.println("You have entered the incorrect PIN number. Please try again.");
             }
