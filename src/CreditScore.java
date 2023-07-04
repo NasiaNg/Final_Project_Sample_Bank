@@ -14,7 +14,7 @@ public class CreditScore {
             System.out.println("Your credit score is " + score);
             if (score < 600) {
 
-                // throw an object of user defined exception
+/*throw an object of user defined exception*/
                 throw new LessThanException("Credit Score is too low");
             } else {
                 System.out.println("Good Credit Score! You are eligible for a credit card");
