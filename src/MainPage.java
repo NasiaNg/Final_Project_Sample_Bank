@@ -1,6 +1,7 @@
 /* Scanner, Switch Statement, Method Override,
 To String, Super Keyword, Inheritance, Stack,
-Exception, Interface, Abstract */
+Exception, Interface, Abstract
+Nasia Nguyen nasian1@umbc.edu*/
 import java.util.Scanner;
 public class MainPage {
 /* Properties */
