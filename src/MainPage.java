@@ -1,6 +1,7 @@
 /* Scanner, Switch Statement, Method Override,
 To String, Super Keyword, Inheritance, Stack,
-Exception, Interface, Abstract, Array List, Do-While Loop
+Exception, Interface, Hashmap, Abstract, Encapsulation,
+Array List, Do-While Loop
 Nasia Nguyen nasian1@umbc.edu*/
 import java.util.Scanner;
 public class MainPage {
